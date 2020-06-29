@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -57,34 +57,38 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton4"
+            android:id="@+id/begginerSkillBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onBegginerClick"
             android:text="@string/begginer"
             android:textColor="@android:color/white"
             android:textOff="@string/begginer"
             android:textOn="@string/begginer"
-            android:layout_marginEnd="16dp" />
+            tools:ignore="OnClick" />
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/advancedSkillBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onAdvancedClick"
             android:text="@string/advanced"
             android:textColor="@android:color/white"
             android:textOff="@string/advanced"
-            android:textOn="@string/advanced" />
+            android:textOn="@string/advanced"
+            tools:ignore="OnClick" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/skillFinishBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -93,11 +97,13 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/swoosh_button"
+        android:onClick="onskillFinishClicked"
         android:text="@string/finish"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
